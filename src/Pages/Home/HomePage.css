@@ -1,0 +1,85 @@
+
+
+h1 {
+    font-size: 28px;
+    /* margin-top: 50px; */
+  }
+  
+  button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #9ab7d6;
+    color: black;
+    font-weight: bolder;
+  }
+  
+  /* div {
+    margin-top: 100px;
+  } */
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(238, 217, 217);
+  }
+  
+  nav h1 {
+    color: #007bff;
+    margin-left: 50px
+  }
+  
+  #buttons {
+    margin-right: 30px
+  }
+  
+  #login {
+    margin-right: 20px
+  }
+  
+  #maincard {
+    margin-bottom: 50px
+  }
+  
+  #services img {
+    width: 50%;
+    height: 400px
+  }
+  
+  #services h1 {
+    background-color: #8ab7e7;
+    font-size: 35px;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+  
+  #index h1{
+    cursor:pointer
+  }
+  
+  #index h1,
+  #maincard h1{
+    font-family: Verdana, Geneva, sans-serif;
+  }
+  
+  #offer {
+    font-size: 80px;
+  }
+  
+  footer {
+    background-color: rgb(238, 217, 217);
+    margin-top: 100px;
+    padding: 40px
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 20px;
+  }
