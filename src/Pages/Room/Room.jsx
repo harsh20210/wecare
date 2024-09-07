@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Peer from 'peerjs';
 import io from 'socket.io-client';
+import { useNavigate } from 'react-router-dom';
 
 const Room = () => {
+  const navigate = useNavigate()
   const [stream, setStream] = useState(null);
   const [peers, setPeers] = useState({});
   const videoGridRef = useRef(null);
@@ -113,7 +115,7 @@ const Room = () => {
   };
 
   const redirectToDashboard = () => {
-    window.location.href = './patientdashboard.html';
+    navigate('/patientdashboard')
   };
 
   return (

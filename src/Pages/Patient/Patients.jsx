@@ -2,10 +2,12 @@
 import React, { useEffect, useState } from "react";
 import './Patients.css'
 import Modal from "./Modal";
+import { useNavigate } from "react-router-dom";
 
 const backendURL = "https://pococare1.onrender.com/";
 
 const Patients = () => {
+  const navigate = useNavigate()
   const [appointments, setAppointments] = useState([]);
   const [doctors, setDoctors] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,7 +22,7 @@ const Patients = () => {
   useEffect(() => {
     if (!token) {
       alert("Please login");
-      window.location.href = "./signin.html";
+      navigate('/signin')
     }
 
     fetchAppointments(patientId);
@@ -70,7 +72,7 @@ const Patients = () => {
       });
       if (response.ok) {
         alert("Logging you out");
-        window.location.href = "../index.html";
+        navigate('/');
       }
     } catch (error) {
       console.error("Error during logout:", error);

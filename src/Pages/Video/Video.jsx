@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './Video.css'
+import { useNavigate } from 'react-router-dom';
 
 const VideoButton = () => {
+  const navigate = useNavigate()
   const [loading, setLoading] = useState(false);
 
   const backendURL = "https://pococare1.onrender.com/";
@@ -25,14 +27,14 @@ const VideoButton = () => {
         },
         body: JSON.stringify({
           email: localStorage.getItem("email"),
-          url: `${url}view/room.html?roomId=${res.roomId}`,
+          url: `${url}/room?roomId=${res.roomId}`,
         }),
       });
 
       alert("Doctor will receive an email with the Meeting Link");
 
       // Redirect to room page
-      window.location.href = `./room.html?roomId=${res.roomId}`;
+      navigate(`/room?roomId=${res.roomId}`)
     } catch (error) {
       console.error("Error during video request:", error);
     } finally {

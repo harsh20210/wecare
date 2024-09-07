@@ -6,6 +6,7 @@ import Signup from "../Pages/loginAndSignup/Signup";
 import Doctor from "../Pages/Doctor/Doctor";
 import Patients from "../Pages/Patient/Patients";
 import Room from "../Pages/Room/Room";
+import VideoAdmin from "../Pages/VideoAdmin/VideoAdmin";
 
 export default function Routers() {
   return (
@@ -17,6 +18,7 @@ export default function Routers() {
         <Route path="/doctordashboard" element={<Doctor/>} />
         <Route path="/patientdashboard" element={<Patients/>} />
         <Route path="/room" element={<Room/>} />
+        <Route path="/viewadmin" element={<VideoAdmin/>} />
     </Routes>
   )
 }
